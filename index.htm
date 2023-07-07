@@ -1,0 +1,2307 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class=""><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta id="descriptionTag" name="description" content="This is a description for the site.">
+    <title>Os terríveis</title>
+    <link id="favicon" rel="icon" href="images/favicon.png">
+    <script src="jquery-latest.min.js"></script>
+    <script type="text/javascript" src="bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="releases/v5.0.8/css/all.css" rel="stylesheet">
+    <script src="js/analytics.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sweetalert.css" rel="stylesheet">
+    <script src="js/swal.min.js"></script>
+    <link href="css-1?family=Lato&amp;display=swap" rel="stylesheet">
+    <link href="css-2?family=Poppins:800,800i&amp;display=swap" rel="stylesheet">
+
+    <link href="css-3?family=Roboto+Slab:700&amp;display=swap" rel="stylesheet">
+    <link href="css-4?family=Montserrat:300,300i&amp;display=swap" rel="stylesheet">
+    
+    <style id="fontFamilyStyle">
+    
+    h1, h2, h3, h4, h5, h6, h1 div, h2 div, h3 div, h4 div, h5 div, h6 div {
+        font-family: "Bebas Neue", sans-serif;
+    }
+    p, span, label, a, button, strong, div, em {
+        font-family: "Merriweather Sans", sans-serif;
+    }
+    </style>
+    <link href="css/leia.css" rel="stylesheet">
+    <script>    
+        $.browser = {}; $.support.opacity = true;
+    </script>
+    <script src="lib/fancybox/jquery.fancybox-1.3.4.pack.js?v=1688670255"></script>
+    <script src="lib/fancybox/jquery.easing-1.3.pack.js"></script>
+    <script src="lib/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script>
+        var setCategoryClicksBackup = function() {
+            $(".categoryButton").unbind();
+            $('.categoryButton').click(function(){
+                // let offsetHeight = document.getElementById('galleryRowContainer').offsetHeight.toString() + 'px';
+                var value = $(this).attr('data-filter');
+                // $('#galleryRowContainer').css({'min-height':offsetHeight}); 
+
+                // setTimeout(function(){
+                //     $('#galleryRowContainer').animate({'min-height':'0'});
+                // },3000)
+
+                if (value === 'all') {
+                    $('.categoryFilter').show('1000');
+                    $(this).addClass('categoryButtonSelected');
+                    $('.categoryButton').not(this).removeClass('categoryButtonSelected');
+                } else if ($(this).hasClass('categoryButtonSelected')) {
+                    $('.categoryFilter').show('1000');
+                    $(this).removeClass('categoryButtonSelected');
+                    $('.allCategoryButton').addClass('categoryButtonSelected');
+                }
+                else {
+                    $('.categoryFilter').not('.' + value).hide('3000');
+                    $('.categoryFilter').filter('.' + value).show('3000');
+                    $('.allCategoryButton').removeClass('categoryButtonSelected');
+                    $('.categoryButton').not(this).removeClass('categoryButtonSelected');
+                    $(this).toggleClass('categoryButtonSelected');
+                }
+            });
+
+            $("a[rel=scrollGroup]").fancybox({
+                'transitionIn'		: 'fade',
+                'transitionOut'		: 'fade',
+                'titlePosition' 	: 'over',
+                'type'              : 'image',
+                'titleFormat'		: function(title) {
+                    return '<span id="fancybox-title-over">' + title + '';
+                }
+            });
+        }
+    </script>
+    
+<link href="css-5?family=Bitter:100,200,300,regular,500,600,700,800,900,100i,200i,300i,i,500i,600i,700i,800i,900i&amp;display=swap" rel="stylesheet"><link href="css-6?family=Yanone+Kaffeesatz:200,300,regular,500,600,700&amp;display=swap" rel="stylesheet"><link href="css-7?family=Merriweather+Sans:300,regular,500,600,700,800,300i,i,500i,600i,700i,800i&amp;display=swap" rel="stylesheet"><link href="css-8?family=Bebas+Neue:regular&amp;display=swap" rel="stylesheet"></head>
+<body style="">
+<nav id="mainMenu" class="navbar navbar-default navbar-fixed-top" role="navigation" style="opacity: 1;">
+    <div class="container noCustomElement">
+        <div class="navbar-header noCustomElement">
+            <button type="button" class="navbar-toggle menuButton collapsed" data-toggle="collapse" data-target="#navigationBar" altonclick="null" althref="null" aria-expanded="false">
+                <span id="menuSpanText" altonclick="null" althref="null" class="">Menu </span>
+                <i class="fa fa-bars" altonclick="null" althref="null"></i>
+            </button>
+            <a id="menuTitle" class="navbar-brand page-scroll" altonclick="null" href="#">Os terríveis</a>
+        </div>
+        <div class="navbar-collapse noCustomElement collapse" id="navigationBar" aria-expanded="false" style="height: 1px;">
+            <ul id="menuItems" class="nav navbar-nav navbar-right">
+                
+                    
+                    
+                
+                
+                    
+                    
+                <li class="menuItemLi">
+                    <a id="galleryMenuItem" class="menuItemA" altonclick="null" href="#gallery">Galeria</a>
+                </li>
+                <li class="menuItemLi">
+                    <a id="teamMenuItem" class="menuItemA" altonclick="null" href="#team">Membros</a>
+                </li>
+                
+                
+                  
+            
+            
+                
+                
+            </ul>
+        </div>
+    </div>
+    <style>
+        #mainMenu {
+            background: rgba(255,255,255,0.8);
+            border: none;
+            word-break: break-word;
+        }
+
+        .menuItemLi {
+            padding-left: 3px;
+            padding-right: 3px;
+            padding-top: 5px;
+        }
+
+        .menuItemA {
+            font-size: 15px;
+            cursor: pointer;
+            transition: color 0.6s ease 0s;
+        }
+        
+        #navigationBar {
+            overflow-y: hidden;
+            max-height: none;
+        }
+
+        #menuItems a:hover {
+            color: rgb(69,42,71);
+        }
+
+        #menuItems .active {
+            color: rgb(69,42,71);
+        }
+
+        #menuTitle {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 20px;
+            transition: color 0.6s ease 0s;
+            color: black;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        #menuTitle:hover {
+            color: rgb(69,42,71);
+        }
+
+        .menuButton {
+            background: rgb(69,42,71);
+            color: white;
+        }
+
+        .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+            background: rgb(69,42,71);
+                color: white;
+        }
+
+        @media only screen and (min-device-width : 800px) {
+            .navbar-toggle {
+                margin-top: 15px;
+            }
+            
+            .menuItemLi {
+                padding-top: 0;
+            }
+        }
+
+        @media only screen and (min-device-width : 768px) {
+            .navbar-nav>li>a {
+                padding-top: 30px;
+            }
+        }
+        
+        @media only screen and (max-device-width : 768px) {
+            .menuButton {
+                margin-top: 15px;
+            }
+        }
+    </style>
+</nav>
+        <script>
+            $(document).ready(function() {
+                $('nav').fadeIn();
+            });
+        </script>
+<header class="" style="background: url(&quot;photo-1571613316887-6f8d5cbf7ef7&quot;) center center / cover no-repeat fixed; margin-bottom: 0px;">
+
+        <div class="sectionOverlay" id="headerOverlay" style="background: rgba(0, 0, 0, 0.3)"></div>
+        <div id="outerHeader" class="noCustomElement" style="opacity: 1;">
+    <div id="headerContainer" class="noCustomElement">
+        <div id="headerContent" class="noCustomElement">
+            <div class="row">
+                <div id="headerInfo" class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 noCustomElement">
+                    <div id="firstLetterWrap"><h4 id="firstLetter" class="firstLetters" altonclick="null" althref="null">&nbsp; &nbsp;</h4></div>
+                    <div id="headerTitleWrap"><h1 id="headerTitle" class="headerTitles" altonclick="null" althref="null">Os terríveis</h1></div>
+                    <div id="headerSubtitleWrap"><h3 id="headerSubtitle" class="headerSubtitles" altonclick="null" althref="null">COVELAS CITY</h3></div>
+                </div>
+            </div>
+            <div class="row noCustomElement">
+                <div id="iconContainer" class="col-sm-4 col-sm-offset-4 col-xs-12">
+                    <i id="facebookHeader" class="headerIcons fab fa-facebook-f icons" altonclick="null" althref="null"></i>
+                    <i id="twitterHeader" class="headerIcons fab fa-twitter icons" altonclick="null" althref="null"></i>
+                    <i id="yelpHeader" class="headerIcons fab fa-yelp icons" altonclick="null" althref="null"></i>
+                    <i id="instagramHeader" class="headerIcons fab fa-instagram icons" altonclick="null" althref="null"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+
+        #headerContent {
+            color: white;
+            overflow: hidden;
+            word-break: break-word;
+        }
+
+        #headerInfo {
+            text-align: center;
+        }
+
+        #headerTitle {
+            font-size: 112px;
+            text-transform: uppercase;
+        }
+
+        #headerSubtitle {
+            font-size: 42px;
+            font-style: italic;
+        }
+
+        #iconContainer {
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        .headerIcons {
+            display: inline-block;
+            margin: 5%;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        .headerIcons:hover {
+            opacity: 0.5;
+        }
+
+        #firstLetter {
+            font-size: 32px;
+            border: 4px double rgb(69,42,71);
+            text-shadow: 1px 1px rgb(69,42,71);
+            display: inline;
+            margin: 0 auto;
+            padding: 6px 16px;
+            border-radius: 5px 20px 5px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        header .customTitle {
+            font-size: 35px;
+            display: block;
+        }
+
+        header .customParagraph {
+            font-size: 22px;
+            display: block;
+        }
+
+        header .customLink,
+        header .customLink a {
+            color: white;
+            font-size: 22px;
+            display: block;
+            width: 100%;
+        }
+
+        header .customLink:hover {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        header .customIcon {
+            font-size: 40px;
+        }
+
+        header .customTitle,
+        header .customParagraph,
+        header .customLink,
+        header .customIcon,
+        header .customButton,
+        header .customImage,
+        header .customEmbed {
+            margin: 10px 0;
+        }
+        
+        header #firstLetterWrap .customTitle,
+        header #firstLetterWrap .customParagraph,
+        header #firstLetterWrap .customLink,
+        header #firstLetterWrap .customIcon,
+        header #firstLetterWrap .customButton,
+        header #firstLetterWrap .customImage,
+        header #firstLetterWrap .customEmbed {
+            margin: 30px 0 0;
+        }
+        
+        header #headerTitleWrap .customTitle,
+        header #headerTitleWrap .customParagraph,
+        header #headerTitleWrap .customLink,
+        header #headerTitleWrap .customIcon,
+        header #headerTitleWrap .customButton,
+        header #headerTitleWrap .customImage,
+        header #headerTitleWrap .customEmbed {
+            margin: 0;
+        }
+        
+        header #headeSubtitleWrap .customTitle,
+        header #headeSubtitleWrap .customParagraph,
+        header #headeSubtitleWrap .customLink,
+        header #headeSubtitleWrap .customIcon,
+        header #headeSubtitleWrap .customButton,
+        header #headeSubtitleWrap .customImage,
+        header #headeSubtitleWrap .customEmbed,
+        header #iconContainer .customTitle,
+        header #iconContainer .customParagraph,
+        header #iconContainer .customLink,
+        header #iconContainer .customIcon,
+        header #iconContainer .customButton,
+        header #iconContainer .customImage,
+        header #iconContainer .customEmbed {
+            margin: 10px 0 0;
+        }
+
+        @media only screen and (max-width : 800px) {
+            
+            #rightSide {
+                margin-right: 35px;
+            }
+            
+            #headerTitle {
+                font-size: 50px;
+                margin-top: 40px;
+            }
+
+            #headerSubtitle {
+                font-size: 20px;
+            }
+
+            .headerIcons {
+                font-size: 30px;
+            }   
+        }
+
+        @media only screen and (max-width : 767px) {
+
+            #firstLetter {
+                display: inline-block;
+            }
+
+            header .customTitle {
+                font-size: 28px;
+            }
+
+            header .customParagraph {
+                font-size: 18px;
+            }
+
+            header .customLink,
+            header .customLink a {
+                font-size: 18px;
+            }
+
+            header #headeSubtitleWrap .customTitle,
+            header #headeSubtitleWrap .customParagraph,
+            header #headeSubtitleWrap .customLink,
+            header #headeSubtitleWrap .customIcon,
+            header #headeSubtitleWrap .customButton,
+            header #headeSubtitleWrap .customImage,
+            header #headeSubtitleWrap .customEmbed {
+                margin: 20px 0 0;
+            }
+
+            header #iconContainer .customImage {
+                padding: 0 30px;
+            }
+        }
+    </style>
+</div>
+        <style>
+
+            header {
+                background: url('img/galeryphotos-r2hxR-WD2wo-sPBOx-dsWW7-bqeNs.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: top;
+                background-attachment: fixed;
+            }
+        @media only screen and (max-width: 767px) {
+            #headerTitle {
+                font-size: 46px;
+            }
+        }
+            #headerLogoImage {
+                position: fixed;
+                left: 3%;
+                bottom: 10px;
+                width: 200px;
+                max-width: 30%;
+                z-index: 100;
+            }
+        </style>
+        
+        
+        
+    </header>
+    
+
+
+
+
+
+
+
+<section id="about"><div class="sectionOverlay" id="aboutOverlay" style="background: rgba(0, 0, 0, 0.3);"></div>
+            <div id="outerAbout" class="outerSection noCustomElement" style="opacity: 1;">
+    <div id="aboutContainer" class="sectionContainer aboutImageBg noCustomElement customImageBg" style="background: url(&quot;photo-1536940385103-c729049165e6&quot;) center center / cover no-repeat fixed;">
+        <div id="aboutContent" class="sectionContent container-fluid noCustomElement">
+            <div id="aboutRow" class="row noCustomElement">
+                <div class="outerGrid col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-12 noCustomElement">
+                    <div class="innerGridTable noCustomElement">
+                        <div class="innerTableContent noCustomElement">
+                            <div id="aboutTitleWrap"><h2 id="aboutTitle" class="aboutTitles" altonclick="null" althref="null">FESTAS DE COVELAS 2023</h2></div>
+                            <div id="aboutParagraph1Wrap"><p id="aboutParagraph1" class="aboutParagraph text-custom-id-TMgg6PPwqhEZyQveRNsiNRg1z1SPZHGfoQ1xlLbq" altonclick="null" althref="null" originalfont="Montserrat, sans-serif">While other Galery photos solutions endeavor to be less inclined to service their customers with intimacy and integrity, we specialize in results that are community oriented, affable, and pioneering. We submerge ourselves in your solution to increase profound understanding into your operational and vital potential, working with you to co-make arrangements explicitly for you.</p></div>
+                            <div id="aboutParagraph2Wrap"><p id="aboutParagraph2" class="aboutParagraph text-custom-id-TMgg6PPwqhEZyQveRNsiNRg1z1SPZHGfoQ1xlLbq" altonclick="null" althref="null">We are one .</p></div>
+                            <div id="aboutButtons"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="outerGrid col-lg-6 col-sm-5 col-xs-12 noCustomElement">
+                    <div class="innerGridTable noCustomElement">
+                        <div class="innerTableContent noCustomElement">
+                            <div id="aboutImage1"><img class="aboutImages" src="photo-1584448141569-69f342da535c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMjE1M3wwfDF8c2VhcmNofDJ8fHBvc3RlcnxlbnwwfHx8fDE2ODg2NzI4Mzd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" altonclick="null" althref="null"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #about {
+            color: black;
+        }
+
+        #about .aboutImageBg {
+            color: white;
+        }
+
+        #aboutRow {
+            display: flex;
+        }
+
+        #about .aboutImageBg #aboutLine {
+            border-color: white;
+        }
+
+        #aboutTitleWrap {
+            margin: 64px auto 48px;
+        }
+
+        #aboutTitle {
+            font-size: 42px;
+            margin: 15px 0;
+        }
+
+        .aboutParagraph {
+            line-height: 2; 
+        }
+
+        #aboutParagraph1Wrap {
+            margin-bottom: 32px;
+        }
+
+        .aboutImages {
+            width: 100%;
+        }
+
+        #about .aboutImageBg .aboutImages {
+            border: 2px solid white;
+        }
+
+        #aboutButtons {
+            margin-top: 58px;
+        }
+
+        .aboutButton {
+            color: black;
+            padding: 6px 42px;
+            border: 2px solid rgb(69,42,71);
+            border-radius: 6px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.5s;
+            display: inline-block;
+        }
+
+        .aboutButton:focus {
+            color: black;
+        }
+
+        #about .aboutImageBg .aboutButton {
+            color: white;
+            border-color: white;
+        }
+
+        .aboutButton:hover {
+            color: white;
+            background-color: rgb(69,42,71);
+            text-decoration: none;
+        }
+
+        #about .customTitle {
+            font-size: 36px;
+            display: block;
+        }
+
+        #about .customParagraph {
+            font-size: 14px;
+            line-height: 2;
+            display: block;
+        }
+
+        #about .customLink {
+            color: black;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+        }
+
+        #about .aboutImageBg .customLink {
+            color: white;
+        }
+
+        #about .customLink:hover {
+            opacity: 0.5;
+            text-decoration: none;
+        }
+
+        #about .customIcon {
+            font-size: 30px;
+        }
+
+        #about .customTitle,
+        #about .customParagraph,
+        #about .customLink,
+        #about .customIcon,
+        #about .customButton,
+        #about .customImage,
+        #about .customEmbed {
+            margin: 10px 0;
+        }
+        
+        #about #aboutTitleWrap .customTitle,
+        #about #aboutTitleWrap .customParagraph,
+        #about #aboutTitleWrap .customLink,
+        #about #aboutTitleWrap .customIcon,
+        #about #aboutTitleWrap .customButton,
+        #about #aboutTitleWrap .customImage,
+        #about #aboutTitleWrap .customEmbed,
+        #about #aboutParagraph2Wrap .customTitle,
+        #about #aboutParagraph2Wrap .customParagraph,
+        #about #aboutParagraph2Wrap .customLink,
+        #about #aboutParagraph2Wrap .customIcon,
+        #about #aboutParagraph2Wrap .customButton,
+        #about #aboutParagraph2Wrap .customImage,
+        #about #aboutParagraph2Wrap .customEmbed {
+            margin: 30px 0 0;
+        }
+        
+        #about #aboutParagraph1Wrap .customTitle,
+        #about #aboutParagraph1Wrap .customParagraph,
+        #about #aboutParagraph1Wrap .customLink,
+        #about #aboutParagraph1Wrap .customIcon,
+        #about #aboutParagraph1Wrap .customButton,
+        #about #aboutParagraph1Wrap .customImage,
+        #about #aboutParagraph1Wrap .customEmbed,
+        #about #aboutImage1 .customTitle,
+        #about #aboutImage1 .customParagraph,
+        #about #aboutImage1 .customLink,
+        #about #aboutImage1 .customIcon,
+        #about #aboutImage1 .customButton,
+        #about #aboutImage1 .customImage,
+        #about #aboutImage1 .customEmbed {
+            margin: 20px 0 0;
+        }
+        
+        #about #aboutButtons .customTitle,
+        #about #aboutButtons .customParagraph,
+        #about #aboutButtons .customLink,
+        #about #aboutButtons .customIcon,
+        #about #aboutButtons .customButton,
+        #about #aboutButtons .customImage,
+        #about #aboutButtons .customEmbed {
+            margin: 25px 0 0;
+        }
+
+        @media only screen and (max-width : 767px) {
+
+            #aboutRow {
+                display: initial;
+            }
+
+            #aboutTitle {
+                font-size: 36px;
+            }
+
+            .aboutParagraph {
+                line-height: 1.75;
+                margin-right: 0;
+            }
+
+            #aboutButtons {
+                margin-bottom: 72px;
+            }
+
+            #about .customTitle {
+                font-size: 36px;
+            }
+
+            #about .customParagraph {
+                line-height: 1.75;
+            }
+
+            #about .customEmbed iframe {
+                width: 100%;
+            }
+        }
+    </style>
+</div>
+            <style>
+                #aboutContainer {
+                background: rgb(255,255,255);
+            }
+            </style></section><section id="gallery">
+            <script>
+                // script start 
+                $.browser = {}; $.support.opacity = true;
+                // script end
+            </script>
+            <script src="ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+            <script src="lib/fancybox/jquery.easing-1.3.pack.js"></script>
+            <script src="lib/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+            <link href="lib/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet">
+            <div class="sectionOverlay" id="galleryOverlay" style="background: rgba(0, 0, 0, 0)"></div>
+            <div id="outerGallery" class="outerSection noCustomElement" style="opacity: 1;">
+    <div id="galleryContainer" class="sectionContainer noCustomElement">
+        <div id="galleryContent" class="sectionContent container-fluid noCustomElement">
+            <div class="row noCustomElement">
+                <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12 noCustomElement">
+                    <div id="galleryTop" class="row noCustomElement">
+                        <div class="col-sm-12 noCustomElement">
+                            <div id="galleryTitleWrap"><h2 id="galleryTitle" class="galleryTitles text-custom-id-MjE5dCidItCw2rnq6FBHdCK7p1q3cxLhad5WE4L9" altonclick="null" althref="null" originalfont="&quot;Roboto Slab&quot;, serif">Fotos terríveis</h2></div>
+                        </div>
+                        <div id="categoryButtonOuter" class="col-sm-10 col-sm-offset-1 col-xs-12 noCustomElement">
+                            <div id="categoryButtonContainer">
+                                <div id="categoryButtonRow" class="buttons4 noCustomElement">
+                                    
+                                    
+                                    
+                                    
+                                
+                            <div class="categoryButtonContainer noCustomElement">
+                                <div class="categoryButtonWrap noCustomElement"><a id="allCategoriesBtn" class="categoryButton allCategoryButton categoryButtonSelected" data-filter="all" altonclick="null" althref="null">Todos</a></div>
+                            </div>
+                            <div class="categoryButtonContainer noCustomElement">
+                                <div class="categoryButtonWrap noCustomElement"><a class="categoryButton" data-filter="category1" altonclick="null" althref="null">05/08/2022 Habilô</a></div>
+                            </div>
+                          <!--  <div class="categoryButtonContainer noCustomElement">
+                                <div class="categoryButtonWrap noCustomElement"><a class="categoryButton" data-filter="category2" altonclick="null" althref="null">2021</a></div>
+                            </div>
+                            <div class="categoryButtonContainer noCustomElement">
+                                <div class="categoryButtonWrap noCustomElement"><a class="categoryButton" data-filter="category3" altonclick="null" althref="null">2022<br></a></div>
+                            </div>     categorias -->                                
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+                        <div class='innerGridTable galleryImage noCustomElement'>
+                            <a rel='scrollGroup' href='img/image00001.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+                                <img class='galleryImages img-fluid' src='img/image00001.jpeg' altonclick='null' althref='null'>
+                            </a>
+                        </div>
+                        <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+  </div>
+  
+  <div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+                        <div class='innerGridTable galleryImage noCustomElement'>
+                            <a rel='scrollGroup' href='img/image00002.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+                                <img class='galleryImages img-fluid' src='img/image00002.jpeg' altonclick='null' althref='null'>
+                            </a>
+                        </div>
+                        <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+  </div>
+  
+  <div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+                        <div class='innerGridTable galleryImage noCustomElement'>
+                            <a rel='scrollGroup' href='img/image00003.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+                                <img class='galleryImages img-fluid' src='img/image00003.jpeg' altonclick='null' althref='null'>
+                            </a>
+                        </div>
+                        <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+  </div>
+  
+  <div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+                        <div class='innerGridTable galleryImage noCustomElement'>
+                            <a rel='scrollGroup' href='img/image00004.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+                                <img class='galleryImages img-fluid' src='img/image00004.jpeg' altonclick='null' althref='null'>
+                            </a>
+                        </div>
+                        <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+  </div>
+  
+  <div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+                        <div class='innerGridTable galleryImage noCustomElement'>
+                            <a rel='scrollGroup' href='img/image00005.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+                                <img class='galleryImages img-fluid' src='img/image00005.jpeg' altonclick='null' althref='null'>
+                            </a>
+                        </div>
+                        <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+  </div>
+  
+  <div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+                        <div class='innerGridTable galleryImage noCustomElement'>
+                            <a rel='scrollGroup' href='img/image00006.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+                                <img class='galleryImages img-fluid' src='img/image00006.jpeg' altonclick='null' althref='null'>
+                            </a>
+                        </div>
+                        <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+  </div>
+  
+  <div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+                        <div class='innerGridTable galleryImage noCustomElement'>
+                            <a rel='scrollGroup' href='img/image00007.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+                                <img class='galleryImages img-fluid' src='img/image00007.jpeg' altonclick='null' althref='null'>
+                            </a>
+                        </div>
+                        <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+  </div>
+  
+  <div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+                        <div class='innerGridTable galleryImage noCustomElement'>
+                            <a rel='scrollGroup' href='img/image00008.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+                                <img class='galleryImages img-fluid' src='img/image00008.jpeg' altonclick='null' althref='null'>
+                            </a>
+                        </div>
+                        <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+  </div>
+  
+  <div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+                        <div class='innerGridTable galleryImage noCustomElement'>
+                            <a rel='scrollGroup' href='img/image00009.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+                                <img class='galleryImages img-fluid' src='img/image00009.jpeg' altonclick='null' althref='null'>
+                            </a>
+                        </div>
+                        <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+  </div>
+  
+  <div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00010.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00010.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00011.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00011.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00012.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00012.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00013.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00013.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00014.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00014.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00015.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00015.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00016.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00016.jpeg' altonclick='null' althref='null'>
+        </a>
+</div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00017.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00017.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00018.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00018.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00019.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00019.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00020.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00020.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00021.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00021.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00022.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00022.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00023.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+         <img class='galleryImages img-fluid' src='img/image00023.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00024.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00024.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00025.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00025.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+
+<div class='categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1'>
+    <div class='innerGridTable galleryImage noCustomElement'>
+        <a rel='scrollGroup' href='img/image00026.jpeg' class='fancybox innerTableContent' title='Photo 1' altonclick='null'>
+            <img class='galleryImages img-fluid' src='img/image00026.jpeg' altonclick='null' althref='null'>
+        </a>
+    </div>
+    <h4 class='galleryText' altonclick='null' althref='null'>Photo 1</h4>
+</div>
+                            </div><!-- galleryTemplate end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #gallery {
+            color: black;
+        }
+
+        #gallery .galleryImageBg {
+            color: white;
+        }
+
+        #galleryContent {
+            word-wrap: break-word;
+            text-align: center;
+        }
+
+        #galleryTitle {
+            font-size: 50px;
+            margin: 10px 0 40px;
+        }
+
+        #categoryButtonOuter {
+            margin-bottom: 20px;
+        }
+
+        .categoryButtonContainer {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .categoryButton {
+            color: black;
+            border-bottom: 2px solid black;
+            cursor: pointer;
+            display: inline-block;
+            padding: 6px 32px;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: 0.5s;
+            display: inline-block;
+        }
+
+        #gallery .galleryImageBg .categoryButton {
+            color: white;
+            background: transparent;
+            border-color: white;
+        }
+
+        .categoryButton:hover,
+        .categoryButton:focus,
+        .categoryButtonSelected {
+            color: black;
+            box-shadow: 0 0 20px rgb(69,42,71);
+            background-color: white;
+            text-decoration: none;
+        }
+
+        #gallery .galleryImageBg .categoryButtonSelected,
+        #gallery .galleryImageBg .categoryButton:hover,
+        #gallery .galleryImageBg .categoryButton:focus, {
+            color: black;
+        }
+
+        .categoryFilter {
+            margin-top: 40px;
+        }
+
+        .galleryImages {
+            height: 350px;
+            width: 100%;
+            transition: all .3s ease-in-out;
+            -webkit-transition: all .3s ease-in-out;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .galleryImages:hover {
+            transform: scale(1.03);
+        }
+
+        #gallery .galleryImageBg .galleryImages {
+            border: 2px solid white;
+        }
+
+        .galleryText {
+            font-size: 20px;
+            margin-top: 15px;
+            height: 1px;
+        }
+
+        #gallery .galleryImageBg .galleryText {
+            color: white !important;
+        }
+
+        .galleryText:hover {
+            text-decoration: none;
+        }
+
+        #fancybox-content {
+            background: white;
+        }
+
+        #fancybox-title {
+            margin-left: 0 !important;
+            background: white;
+        }
+
+        #fancybox-title-over {
+            color: black;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fancybox-close {
+            right: -35px;
+        }
+
+        #fancybox-right {
+            right: -20px;
+        }
+
+        #fancybox-bg-nw,
+        #fancybox-bg-ne,
+        #fancybox-bg-sw,
+        #fancybox-bg-se {
+            display: none;
+        }
+
+        /* * * * * * * * * */
+
+        #gallery .customTitle {
+            font-size: 40px;
+            display: block;
+        }
+
+        #gallery .customParagraph {
+            font-size: 18px;
+            display: block;
+        }
+
+        #gallery .customLink {
+            color: black;
+            font-size: 18px;
+            display: block;
+            width: 100%;
+        }
+
+        #gallery .galleryImageBg .customLink {
+            color: white;
+        }
+
+        #gallery .customLink:hover {
+            opacity: 0.6;
+            text-decoration: none;
+        }
+
+        #gallery .customIcon {
+            font-size: 32px;
+        }
+
+        #gallery .customTitle,
+        #gallery .customParagraph,
+        #gallery .customLink,
+        #gallery .customIcon, 
+        #gallery .customButton, 
+        #gallery .customImage,
+        #gallery .customEmbed {
+            margin: 10px 0;
+        }
+
+        @media only screen and (max-width : 1050px) {
+
+            .galleryImages {
+                height: 300px;
+            }
+        }
+
+        @media only screen and (max-width : 800px) {
+
+            #galleryTop {
+                border-radius: 0;
+            }
+
+            .galleryImages {
+                height: 280px;
+            }
+        }
+                            
+        @media only screen and (max-width : 767px) {
+
+            #galleryTitle {
+                font-size: 40px;
+            }
+
+            .categoryButton {
+                margin-top: 10px;
+            }
+
+            .galleryImages {
+                height: 350px;
+            }
+
+            #gallery .customParagraph {
+                font-size: 14px;
+            }
+
+            #gallery .customLink {
+                font-size: 14px;
+            }
+        }
+    </style>
+    
+<script>
+    
+        var setCategoryClicks = function() {
+            $(".categoryButton").unbind();
+            $('.categoryButton').click(function(){
+                // let offsetHeight = document.getElementById('galleryRowContainer').offsetHeight.toString() + 'px';
+                var value = $(this).attr('data-filter');
+                // $('#galleryRowContainer').css({'min-height':offsetHeight}); 
+
+                // setTimeout(function(){
+                //     $('#galleryRowContainer').animate({'min-height':'0'});
+                // },3000)
+
+                if (value === 'all') {
+                    $('.categoryFilter').show('1000');
+                    $(this).addClass('categoryButtonSelected');
+                    $('.categoryButton').not(this).removeClass('categoryButtonSelected');
+                } else if ($(this).hasClass('categoryButtonSelected')) {
+                    $('.categoryFilter').show('1000');
+                    $(this).removeClass('categoryButtonSelected');
+                    $('.allCategoryButton').addClass('categoryButtonSelected');
+                }
+                else {
+                    $('.categoryFilter').not('.' + value).hide('3000');
+                    $('.categoryFilter').filter('.' + value).show('3000');
+                    $('.allCategoryButton').removeClass('categoryButtonSelected');
+                    $('.categoryButton').not(this).removeClass('categoryButtonSelected');
+                    $(this).toggleClass('categoryButtonSelected');
+                }
+            });
+
+            $("a[rel=scrollGroup]").fancybox({
+                'transitionIn'		: 'fade',
+                'transitionOut'		: 'fade',
+                'titlePosition' 	: 'inside',
+                'type'              : 'image',
+                'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+                    return '<span id="fancybox-title-over">' + title + '</span>';
+                }
+            });
+        }
+
+    </script></div>
+            <style>
+                #galleryContainer {
+                background: rgb(255,255,255);
+            }
+            </style>
+            <script>
+                $(document).ready(function(){
+                    setCategoryClicks();
+                });
+            </script>
+        </section><section id="team">
+            <div class="sectionOverlay" id="teamOverlay" style="background: rgba(0, 0, 0, 0.3);"></div>
+            <div id="outerTeam" class="outerSection noCustomElement" style="opacity: 1;">
+    <div id="teamContainer" class="sectionContainer teamImageBg noCustomElement" style="background: url(&quot;photo-1683037066602-3ab5c7befbd7&quot;) center center / cover no-repeat fixed; margin-bottom: 0px;">
+        <div id="teamContent" class="sectionContent container-fluid noCustomElement">
+            <div id="teamTop" class="row noCustomElement">
+                <div id="teamTitleOuter" class="outerGrid col-sm-5 col-sm-offset-1 col-xs-12 noCustomElement">
+                    <div class="innerGridTable noCustomElement">
+                        <div id="teamTitleWrap" class="innerTableContent">
+                            <h2 id="teamTitle" class="teamTitles" altonclick="null" althref="null">Membros</h2>
+                        </div>
+                    </div>
+                </div>
+                <div id="teamParaWrap" class="outerGrid col-sm-5 noCustomElement">
+                    <div class="innerGridTable noCustomElement">
+                        <div id="teamParagraphWrap" class="innerTableContent">
+                            <p id="teamParagraph" class="teamParagraphs" altonclick="null" althref="null">We are one of the the top Galery photos solutions in the area. We have been giving high caliber, intensely evaluated Galery photos solutions to all who come to us for years. In that time, we have found out about client administration and the benefit of realizing our customers needs. We adore driving by ordinary and perceiving how extraordinary we can become together!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row noCustomElement">
+                <div class="col-lg-10 col-lg-offset-1 col-sm-12 noCustomElement">
+                    <div id="teamRowContainer" class="noCustomElement">
+                        <!-- teamTemplate start --><div class="team3 row noCustomElement">
+                            <div class="teamTemplate outerGrid col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberRow row noCustomElement">
+                                            <div class="outerGrid col-sm-5 col-xs-5 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberImage"><img class="teamMemberImages" src="img/team/MatthewWilson.jpg" altonclick="null" althref="null"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="teamMemberInfoOuter outerGrid col-sm-7 col-xs-7 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">ADRIANO ALMEIDA</h3></div>
+                                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Matthew, our founder and director, boasts years of industry expertise and an inspirational commitment to our vision. Without leadership like this, we would not be who we are today.</p></div>
+                                                        <div class="teamMemberHrWrap"><hr class="teamMemberHr"></div>
+                                                        <div class="teamIconRow">
+                                                            <i class="teamIcon teamFacebook fab fa-facebook-f" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamTwitter fab fa-twitter" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamLinkedin fab fa-linkedin-in" altonclick="null" althref="null"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="teamTemplate outerGrid col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberRow row noCustomElement">
+                                            <div class="outerGrid col-sm-5 col-xs-5 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberImage"><img class="teamMemberImages" src="img/team/EmilyYoung.jpg" altonclick="null" althref="null"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="teamMemberInfoOuter outerGrid col-sm-7 col-xs-7 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">ANDRÉ ALMEIDA (cOVAS)</h3></div>
+                                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Emily is a certified computer engineer and has won numerous awards in the field. She has over fifteen years experience as an engineer in a variety of technical platforms.</p></div>
+                                                        <div class="teamMemberHrWrap"><hr class="teamMemberHr"></div>
+                                                        <div class="teamIconRow">
+                                                            <i class="teamIcon teamFacebook fab fa-facebook-f" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamTwitter fab fa-twitter" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamLinkedin fab fa-linkedin-in" altonclick="null" althref="null"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="teamTemplate outerGrid col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberRow row noCustomElement">
+                                            <div class="outerGrid col-sm-5 col-xs-5 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberImage"><img class="teamMemberImages" src="img/team/MeganGarcia.jpg" altonclick="null" althref="null"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="teamMemberInfoOuter outerGrid col-sm-7 col-xs-7 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">TIAGO CASTANHEIRA (TC BOSS)</h3></div>
+                                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Megan was instrumental in our record breaking sales. She joined the team in 2016 and her leadership continues to drive the progress of the sales team.</p></div>
+                                                        <div class="teamMemberHrWrap"><hr class="teamMemberHr"></div>
+                                                        <div class="teamIconRow">
+                                                            <i class="teamIcon teamFacebook fab fa-facebook-f" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamTwitter fab fa-twitter" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamLinkedin fab fa-linkedin-in" altonclick="null" althref="null"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div><div class="team3 row noCustomElement">
+                            <div class="teamTemplate outerGrid col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberRow row noCustomElement">
+                                            <div class="outerGrid col-sm-5 col-xs-5 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberImage"><img class="teamMemberImages" src="img/team/LindseyCampbell.jpg" altonclick="null" althref="null"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="teamMemberInfoOuter outerGrid col-sm-7 col-xs-7 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">PEDRO CASTANHEIRA</h3></div>
+                                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Lindsay’s creativity and brand thinking helped make the company’s mark on the industry. Since joining the company in 2014, her leadership has driven the team to incredible success.</p></div>
+                                                        <div class="teamMemberHrWrap"><hr class="teamMemberHr"></div>
+                                                        <div class="teamIconRow">
+                                                            <i class="teamIcon teamFacebook fab fa-facebook-f" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamTwitter fab fa-twitter" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamLinkedin fab fa-linkedin-in" altonclick="null" althref="null"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="teamTemplate outerGrid col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberRow row noCustomElement">
+                                            <div class="outerGrid col-sm-5 col-xs-5 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberImage"><img class="teamMemberImages" src="img/team/JacobLee.jpg" altonclick="null" althref="null"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="teamMemberInfoOuter outerGrid col-sm-7 col-xs-7 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">...</h3></div>
+                                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Jacob has a long history in HR. Before he joined the team in 2009, he spent the previous ten years as HR manager at Business Industry’s headquarters in London.</p></div>
+                                                        <div class="teamMemberHrWrap"><hr class="teamMemberHr"></div>
+                                                        <div class="teamIconRow">
+                                                            <i class="teamIcon teamFacebook fab fa-facebook-f" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamTwitter fab fa-twitter" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamLinkedin fab fa-linkedin-in" altonclick="null" althref="null"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="teamTemplate outerGrid col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberRow row noCustomElement">
+                                            <div class="outerGrid col-sm-5 col-xs-5 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberImage"><img class="teamMemberImages" src="img/team/AlexKing.jpg" altonclick="null" althref="null"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="teamMemberInfoOuter outerGrid col-sm-7 col-xs-7 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">...</h3></div>
+                                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Alex’s dedication to her position is second to none. She is well respected by her team as well as the entire industry. She has been meeting deadlines and getting things done right with us since 2012.</p></div>
+                                                        <div class="teamMemberHrWrap"><hr class="teamMemberHr"></div>
+                                                        <div class="teamIconRow">
+                                                            <i class="teamIcon teamFacebook fab fa-facebook-f" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamTwitter fab fa-twitter" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamLinkedin fab fa-linkedin-in" altonclick="null" althref="null"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div><div class="team3 row noCustomElement">
+                            <div class="teamTemplate outerGrid col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberRow row noCustomElement">
+                                            <div class="outerGrid col-sm-5 col-xs-5 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberImage"><img class="teamMemberImages" src="img/team/EricHernandez.jpg" altonclick="null" althref="null"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="teamMemberInfoOuter outerGrid col-sm-7 col-xs-7 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">...</h3></div>
+                                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Once Eric took over as CFO, our investment strategy really began to take shape. His well-rounded background in finance and accounting is a significant driver of success.</p></div>
+                                                        <div class="teamMemberHrWrap"><hr class="teamMemberHr"></div>
+                                                        <div class="teamIconRow">
+                                                            <i class="teamIcon teamFacebook fab fa-facebook-f" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamTwitter fab fa-twitter" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamLinkedin fab fa-linkedin-in" altonclick="null" althref="null"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="teamTemplate outerGrid col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberRow row noCustomElement">
+                                            <div class="outerGrid col-sm-5 col-xs-5 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberImage"><img class="teamMemberImages" src="img/team/TimRoberts.jpg" altonclick="null" althref="null"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="teamMemberInfoOuter outerGrid col-sm-7 col-xs-7 noCustomElement">
+                                                <div class="innerGridTable noCustomElement">
+                                                    <div class="innerTableContent noCustomElement">
+                                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">...</h3></div>
+                                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Tim joined the team in 2011 and has spent his entire working career in customer relations and continues to excel in his field.</p></div>
+                                                        <div class="teamMemberHrWrap"><hr class="teamMemberHr"></div>
+                                                        <div class="teamIconRow">
+                                                            <i class="teamIcon teamFacebook fab fa-facebook-f" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamTwitter fab fa-twitter" altonclick="null" althref="null"></i>
+                                                            <i class="teamIcon teamLinkedin fab fa-linkedin-in" altonclick="null" althref="null"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div><!-- teamTemplate end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #team {
+            color: black;
+        }
+
+        #team .teamImageBg {
+            color: white;
+        }
+
+        #teamContent {
+            word-wrap: break-word;
+            text-align: center;
+        }
+
+        #teamTop {
+            display: flex;
+            margin-left: 10px;
+        }
+
+        #teamTitleOuter {
+            text-align: left;
+        }
+        
+        #teamParaWrap {
+            text-align: right;
+        }
+
+        #teamTitle {
+            font-size: 48px;
+            letter-spacing: .035em;
+            margin: 0;
+        }
+
+        #teamParagraph {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .team3 {
+            /* display: flex; */
+            margin: 0;
+        }
+
+        .teamTemplate {
+            margin-top: 60px;
+        }
+
+        .teamMemberRow {
+            display: flex;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .teamMemberImages {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        #team .teamImageBg .teamMemberImages {
+            border: 1px solid white;
+        }
+
+        .teamMemberInfoOuter {
+            padding: 0 5px;
+        }
+
+        .teamMemberName {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        .teamMemberHr {
+            border: 1px solid rgb(69,42,71);
+            margin: 10px 0;
+        }
+
+        #team .teamImageBg .teamMemberHr {
+            border-color: white;
+        }
+
+        .teamIconRow {
+            margin: 20px 0 0;
+        }
+
+        .teamIcon {
+            display: inline;
+            margin-left: 10%;
+            margin-right: 10%;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .teamIcon:hover {
+            opacity: 0.5;
+        }
+
+        /* * * * * * * * */
+
+        #team .customTitle {
+            font-size: 40px;
+            letter-spacing: .035em;
+            display: block;
+        }
+
+        #team #teamRowContainer .customTitle {
+            font-size: 24px;
+            letter-spacing: normal;
+            font-weight: bold;
+        }
+
+        #team .customParagraph {
+            font-size: 14px;
+            line-height: 1.5;
+            display: block;
+        }
+
+        #team #teamRowContainer .customLink,
+        #team #teamRowContainer .customParagraph {
+            font-size: 14px;
+            line-height: normal;
+        }
+
+        #team .customLink {
+            color: black;
+            font-size: 14px;
+            display: block;
+            width: 100%;
+        }
+
+        #team .teamImageBg .customLink {
+            color: white;
+        }
+
+        #team .customLink:hover {
+            opacity: 0.6;
+            text-decoration: none;
+        }
+
+        #team .customIcon {
+            font-size: 30px;
+        }
+        
+        #team #teamRowContainer .customIcon {
+            font-size: 26px;
+        }
+
+        #team .customTitle,
+        #team .customParagraph,
+        #team .customLink,
+        #team .customIcon,
+        #team .customButton,
+        #team .customImage,
+        #team .customEmbed {
+            margin: 10px 0;
+        }
+
+        #team #teamTitleWrap .customTitle,
+        #team #teamTitleWrap .customParagraph,
+        #team #teamTitleWrap .customLink,
+        #team #teamTitleWrap .customEmbed,
+        #team .teamMemberImage .customTitle,
+        #team .teamMemberImage .customParagraph,
+        #team .teamMemberImage .customLink,
+        #team .teamMemberImage .customIcon,
+        #team .teamMemberImage .customButton,
+        #team .teamMemberImage .customImage,
+        #team .teamMemberImage .customEmbed,
+        #team .teamMemberHrWrap .customTitle,
+        #team .teamMemberHrWrap .customParagraph,
+        #team .teamMemberHrWrap .customLink,
+        #team .teamMemberHrWrap .customIcon,
+        #team .teamMemberHrWrap .customButton,
+        #team .teamMemberHrWrap .customImage,
+        #team .teamMemberHrWrap .customEmbed,
+        #team .teamIconRow .customTitle,
+        #team .teamIconRow .customParagraph,
+        #team .teamIconRow .customLink,
+        #team .teamIconRow .customIcon,
+        #team .teamIconRow .customButton,
+        #team .teamIconRow .customImage,
+        #team .teamIconRow .customEmbed {
+            margin: 10px 0 0;
+        }
+
+        #team #teamTitleWrap .customIcon,
+        #team #teamTitleWrap .customButton,
+        #team #teamTitleWrap .customImage,
+        #team #teamParagraphWrap .customTitle,
+        #team #teamParagraphWrap .customParagraph,
+        #team #teamParagraphWrap .customLink,
+        #team #teamParagraphWrap .customIcon,
+        #team #teamParagraphWrap .customButton,
+        #team #teamParagraphWrap .customImage,
+        #team #teamParagraphWrap .customEmbed {
+            margin: 0;
+        }
+
+        #team .teamMemberNameWrap .customTitle,
+        #team .teamMemberNameWrap .customParagraph,
+        #team .teamMemberNameWrap .customLink,
+        #team .teamMemberNameWrap .customIcon,
+        #team .teamMemberNameWrap .customButton,
+        #team .teamMemberNameWrap .customImage,
+        #team .teamMemberNameWrap .customEmbed,
+        #team .teamMemberTextWrap .customTitle,
+        #team .teamMemberTextWrap .customParagraph,
+        #team .teamMemberTextWrap .customLink,
+        #team .teamMemberTextWrap .customIcon,
+        #team .teamMemberTextWrap .customButton,
+        #team .teamMemberTextWrap .customImage,
+        #team .teamMemberTextWrap .customEmbed {
+            margin: 0 0 10px;
+        }
+
+        @media only screen and (max-width : 1050px) {
+
+            .teamMemberRow {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            #teamTitle {
+                font-size: 42px;
+            }
+
+            .teamMemberName {
+                font-size: 20px;
+            }
+
+            .teamMemberHr {
+                margin: 10px 0;
+            }
+
+            .teamIconRow {
+                margin-top: 10px;
+            }
+
+            #team #teamRowContainer .customTitle {
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and (max-width : 991px) {
+
+            .team3 {
+                display: initial;
+            }
+
+            .teamMemberImages {
+                height: auto;
+            }
+        }
+
+        @media only screen and (max-width : 767px) {
+
+            #teamTop {
+                display: initial;
+            }
+
+            #teamTitleOuter {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            #teamParaWrap {
+                text-align: center;
+            }
+
+            .teamMemberName {
+                font-size: 16px;
+            }
+
+            #team #teamRowContainer .customTitle {
+                font-size: 16px;
+            }
+
+            #team .teamMemberTextWrap .customLink,
+            #team .teamMemberTextWrap .customIcon,
+            #team .teamMemberTextWrap .customImage {
+                margin-bottom: 0;
+            }
+
+            #team .teamMemberHrWrap .customIcon,
+            #team .teamMemberHrWrap .customButton,
+            #team .teamMemberHrWrap .customImage {
+                margin-top: 0;
+            }
+        }
+    </style>
+</div>
+            <style>
+                #teamContainer {
+                background: url('img/galeryphotos-MCHf3-ANMlF-hSzGj-gBSXA-7H06f.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            </style>
+        </section><div id="footer">
+    <h4 class="pageFooter" id="footerFour" altonclick="null" althref="null">© Os terríveis</h4>
+</div>
+
+<div id="newsletterOuter" delay="20000" style="display: none;" class="noCustomElement">
+    <div id="newsOverlaySection" class="noCustomElement">
+        <div class="row innerTableContent noCustomElement">
+            <div id="newsletterBorder" class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 noCustomElement">
+                <button id="closeNewsletterButton" class="newsletterClose" althref="null" onclick="document.getElementById(&quot;newsletterOuter&quot;).style.display = &quot;none&quot;">
+                    <i class="newsletterCloseIcon fa fa-times" aria-hidden="true" altonclick="null" althref="null"></i>
+                </button>
+                <div id="newsletterTitleWrap"><h3 id="newsletterTitle" class="newsLetterTitles" altonclick="null" althref="null">Subscribe to Our Newsletter</h3></div>
+                <div id="newsletterSubtitle1Wrap"><h4 id="newsletterSubtitle1" class="newsletterSubtitles" altonclick="null" althref="null">Enter your email address to recieve periodic updates from us.</h4></div>
+                <form id="newsletterForm"> 
+                    <div id="newsletterRowContainer" class="noCustomElement"> 
+                        <input id="newsletterInput" type="email" class="newsletterFormStyle form-control" placeholder="Enter Your Email Address">
+                        <a id="newsletterButton" class="newsletterFormStyle newsletterButton" althref="null" onclick="submitNewsletter()">Subscribe!</a>
+                    </div>
+                </form>
+                <div id="newsletterSubtitle2Wrap"><h4 id="newsletterSubtitle2" class="newsletterSubtitles" altonclick="null" althref="null">Save up to</h4></div>
+                <div id="newsletterSavingsNumberWrap"><h3 id="newsletterSavingsNumber" class="newsletterSavingsNumbers" altonclick="null" althref="null">15%</h3></div>
+                <div id="newsletterSubtitle3Wrap"><h4 id="newsletterSubtitle3" class="newsletterSubtitles" altonclick="null" althref="null">by subscribing today!</h4></div>
+            </div>
+        </div>
+    </div>
+    <style>
+
+        #newsLetterOuter {
+            word-break: break-word;
+        }
+
+        #closeNewsletterButton {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            border: none;
+            font-size: 24px;
+            background: transparent;
+            cursor: pointer;
+            color: black;
+            transition: 0.4s;
+        }
+
+        #closeNewsletterButton:hover {
+            opacity: 0.5;
+        } 
+
+        #newsOverlaySection {
+            display: table;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            text-align: center;
+        }
+
+        #newsletterBorder {
+            background-color: white;
+            border: 5px solid rgba(69,42,71,0.3);
+        }
+
+        #newsletterTitle {
+            font-size: 40px;
+            margin: 50px 0 10px;
+            color: black;
+            width: 100%;
+        }
+
+        .newsletterSubtitles {
+            margin: 0;
+            font-size: 16px;
+            color: rgb(0,0,0,0.6);
+        }
+
+        #newsletterSavingsNumber {
+            margin: 0;
+            font-size: 36px;
+            color: rgb(69,42,71);
+        }
+
+        .newsletterFormStyle {
+            border: 1px solid rgb(0,0,0,0.7);
+            border-radius: 0;
+            font-size: 12px;
+            width: 60%;
+        }
+
+        #newsletterInput {
+            text-align: center;
+            margin: 40px auto 10px;
+            color: black;
+        }
+
+        #newsletterInput::placeholder {
+            color: rgb(0,0,0,0.7);
+        }
+        
+        #newsletterInput:focus {
+            border-color: rgb(0,0,0,0.7);
+            box-shadow: 0 0 3px rgb(0,0,0,0.7);
+        }
+
+        #newsletterButton {
+            color: white;
+            padding: 8px;
+            background: rgb(0,0,0,0.7);
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.5s;
+            display: inline-block;
+        }
+
+        #newsletterButton:focus {
+            color: white;
+        }
+
+        #newsletterButton:hover {
+            color: rgb(0,0,0,0.7);
+            background: white;
+        }
+
+        #newsletterSubtitle2 {
+            margin-top: 30px;
+        }
+        
+        #newsletterSubtitle3 {
+            margin-bottom: 30px;
+        }
+
+        /* * * * * * * * */
+
+        #newsletterOuter .customTitle {
+            font-size: 40px;
+            display: block;
+        }
+
+        #newsletterOuter .customParagraph {
+            font-size: 18px;
+            display: block;
+        }
+
+        #newsletterOuter .customLink {
+            color: black;
+            font-size: 18px;
+            display: block;
+            width: 100%;
+        }
+
+        #newsletterOuter .customLink:hover {
+            opacity: 0.6;
+            text-decoration: none;
+        }
+
+        #newsletterOuter .customIcon {
+            font-size: 28px;
+        }
+
+        #newsletterOuter .customTitle,
+        #newsletterOuter .customParagraph,
+        #newsletterOuter .customLink,
+        #newsletterOuter .customIcon,
+        #newsletterOuter .customButton,
+        #newsletterOuter .customImage,
+        #newsletterOuter .customEmbed {
+            margin: 10px 0;
+        }
+
+        @media only screen and (max-width : 800px) {
+
+            .newsletterFormStyle {
+                font-size: 16px;
+                width: 100%;
+            }
+
+            #newsletterButton {
+                padding: 4px;
+            }    
+        }
+    </style>
+</div> 
+
+<script id="generalJS">
+    $(document).ready(function() {
+        loadLeiaAd();
+        initializeSmoothScroll();
+        if (window.self !== window.top) {
+            if (document.getElementById('menuOverlaySection')) {
+                document.getElementById('menuOverlaySection').style.height = window.parent.innerHeight.toString() + 'px';
+            }
+            
+            if (document.getElementById('menuBorder')) {
+                document.getElementById('menuBorder').style.maxHeight = window.parent.innerHeight.toString() + 'px';
+            }
+            
+            if (window.orientation !== undefined && document.getElementById('headerBackgroundVideo')) {
+                updateBgimageSizes();
+                window.addEventListener('orientationchange', function() {
+                    updateBgimageSizes();
+                });
+            }
+        } else if (document.getElementById('newsletterOuter') && document.getElementById('newsletterOuter').getAttribute('enabled') === 'true') {
+            var time = parseInt(document.getElementById('newsletterOuter').getAttribute('delay'));
+            if (time > 0) {
+                setTimeout(function() {
+                    $('#newsletterOuter').css('opacity', '0');
+                    $('#newsletterOuter').css('display', '');
+                    $('#newsletterOuter').animate({opacity: '1'}, 1000);
+                }, time);
+            }
+        }
+    });
+    
+    var initializeSmoothScroll = function() {
+        $(document).on('click', 'a[href^="#"]', function (event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 1000);
+        });
+    }
+    
+    var updateBgimageSizes = function() {
+        document.getElementById('headerBackgroundVideo').style.height = document.getElementById('headerContainer').offsetHeight.toString() + 'px';
+    }
+
+    var loadLeiaAd = function() {
+        /*$.ajax({
+            url: 'https://heyleia.com/php/getAdStatus.php',
+            type: 'GET',
+            data: {'domain': window.location.hostname},
+            success: function(type) {
+                if (type === 'ad') {
+                    addLeiaAd();
+                }
+            },
+            error: function(err) {
+                console.log(err);
+            }
+        });*/
+    }
+    
+    var meetingToken;
+    var submitVideoChat = function() {
+        var name = document.getElementById('videoName').value;
+        var email = document.getElementById('videoEmail').value;
+
+        document.getElementById('launchChatButton').disabled = true;
+
+        var spinner = document.createElement('div');
+        var outer = document.createElement('div');
+
+        outer.id = 'spinnerLoading';
+        spinner.className = 'spinnerLoading';
+        outer.style.background = 'rgba(0,0,0,0.7)';
+        outer.style.borderRadius = '20px';
+        outer.style.position = 'fixed';
+        outer.style.left = ((window.innerWidth - 205) / 2).toString() + 'px';
+        outer.style.width = '205px';
+        outer.style.top = '30%';
+        outer.style.height = '205px';
+        outer.style.zIndex = '10000';
+        spinner.style.marginLeft = '42.5px';
+        spinner.style.marginTop = '42.5px';
+        outer.appendChild(spinner);
+        document.body.appendChild(outer);
+
+        if (!addedSpinner) {
+            addedSpinner = true;
+            addSpinnerStyle();
+        }
+
+        $.ajax({
+            url: 'https://heyleia.com/php/scheduleMeeting.php',
+            type: 'POST',
+            data: {name: name, email: email, partner: ''},
+            success: function(data) {
+                meetingToken = data;
+                document.getElementById('launchChatButton').disabled = false;
+                swal('Meeting Ready', 'Click the "Launch Meeting" button to start your video chat.', 'success');
+                document.getElementById('spinnerLoading').parentElement.removeChild(document.getElementById('spinnerLoading'));
+            },
+            error: function(err) {
+                console.log(err);
+                swal('Uh Oh', 'There was an error scheduling your live chat. Please try again in a few minutes!', 'error');
+                document.getElementById('spinnerLoading').parentElement.removeChild(document.getElementById('spinnerLoading'));
+            }
+        })
+    }
+
+    var launchVideoChat = function() {
+        window.open('https://leia-i1i9dytyg6l0tsc3iyaoiderw.braidio.com/meetings/' + meetingToken, '_blank');
+    }
+
+    var showVideo = function() {
+        document.getElementById('videoChatOverlay').style.display = '';
+    }
+
+    var closeVideo = function() {
+        document.getElementById('videoChatOverlay').style.display = 'none';
+    }
+    
+    var shownSchedule = false;
+    var showSchedule = function() {
+        document.getElementById('schedulingOverlay').style.display = '';
+        
+        if (shownSchedule) {
+            var frame = document.getElementById('schedulingOverlay').getElementsByTagName('iframe')[0];
+            var src = frame.getAttribute('src').split('&v')[0];
+            frame.setAttribute('src', src + '&v=' + new Date().getTime());
+        }
+        
+        shownSchedule = true;
+    }
+    
+    var closeSchedule = function() {
+        document.getElementById('schedulingOverlay').style.display = 'none';
+    }
+
+    var addLeiaAd = function() {
+        var img = document.createElement('img');
+        var tag = document.createElement('a');
+        img.id = 'leiaAdLogo';
+        tag.id = 'leiaAdLogoA';
+        img.setAttribute('src', 'https://heyleia.com/images/poweredBy.png');
+
+        if (window.self === window.top && window.location.search !== '?site=live') {
+            tag.setAttribute('href', 'https://heyleia.com/direct?src=site');
+            tag.setAttribute('target', '_blank');
+        } else {
+            img.onclick = function() {
+                if (window.location.search === '?site=live') {
+                    swal('Remove Leia Ad', 'You can remove this ad by upgrading to Leia Pro! This includes hosting and everything else you need for your site.', 'info');
+                } else {
+                    swal({
+                        title: 'Remove Leia Ad',
+                        text: 'You can remove this ad by upgrading to Leia Pro! This includes hosting and everything else you need for your site.',
+                        type: 'info',
+                        icon: 'info',
+                        closeOnClickOutside: true,
+                        showCancelButton: true,
+                        buttons: {
+                            cancel: 'Not Now',
+                            submit: {
+                                text: 'Learn More',
+                                value: 'learn',
+                            }
+                        },
+                        closeOnConfirm: true
+                    }).then(function(isConfirm) {
+                        if (isConfirm == 'learn') {
+                            window.open('https://heyleia.com/upgrade', '_blank');
+                        } 
+                    }); 
+                }
+            }
+        }
+
+        tag.appendChild(img);
+        document.body.appendChild(tag);
+    }
+    
+    var mainColor = 'rgb(69,42,71)';
+    
+    var applyFancyTop = function(top) {
+        if (document.getElementById('fancyStyle')) {
+            document.getElementById('fancyStyle').parentElement.removeChild(document.getElementById('fancyStyle'));
+        }
+        
+        var style = document.createElement('style');
+        style.id = 'fancyStyle';
+        var txt = document.createTextNode('#fancybox-wrap {top: ' + top.toString() + 'px !important;}');
+        style.appendChild(txt);
+        document.body.appendChild(style);
+    }
+    
+    var addedSpinner = false;
+    var submitContactForm = function() {
+        swal("Are you sure you want to submit this message?", {
+            buttons: {
+                no: {
+                    text: "Cancel",
+                    value: "Cancel",
+                    className: 'swal-button swal-button--cancel',
+                    closeModal: false,
+                },
+                yes: {
+                    text: "Submit",
+                    value: "ok"
+                },
+            },
+            title: 'Confirmation',
+            type: 'info',
+            icon: 'info'
+        }).then((value) => {
+            if (value === 'Cancel') {
+                swal.close();
+            } else {
+                var spinner = document.createElement('div');
+                var outer = document.createElement('div');
+
+                outer.id = 'spinnerLoading';
+                spinner.className = 'spinnerLoading';
+                outer.style.background = 'rgba(0,0,0,0.7)';
+                outer.style.borderRadius = '20px';
+                outer.style.position = 'fixed';
+                outer.style.left = ((window.innerWidth - 205) / 2).toString() + 'px';
+                outer.style.width = '205px';
+                outer.style.top = '30%';
+                outer.style.height = '205px';
+                outer.style.zIndex = '10000';
+                spinner.style.marginLeft = '42.5px';
+                spinner.style.marginTop = '42.5px';
+                outer.appendChild(spinner);
+                document.body.appendChild(outer);
+
+                if (!addedSpinner) {
+                    addedSpinner = true;
+                    addSpinnerStyle();
+                }
+
+                var dataObj = {}
+                if (document.getElementById('contactName')) {
+                    dataObj['name'] = document.getElementById('contactName').value;
+                }
+                if (document.getElementById('contactEmail')) {
+                    dataObj['email'] = document.getElementById('contactEmail').value;
+                }
+                if (document.getElementById('contactPhone')) {
+                    dataObj['phone'] = document.getElementById('contactPhone').value;
+                }
+                if (document.getElementById('contactCompany')) {
+                    dataObj['company'] = document.getElementById('contactCompany').value;
+                }
+                if (document.getElementById('contactStreet')) {
+                    dataObj['street'] = document.getElementById('contactStreet').value;
+                }
+                if (document.getElementById('contactCity')) {
+                    dataObj['city'] = document.getElementById('contactCity').value;
+                }
+                if (document.getElementById('contactState')) {
+                    dataObj['state'] = document.getElementById('contactState').value;
+                }
+                if (document.getElementById('contactSubject')) {
+                    dataObj['subject'] = document.getElementById('contactSubject').value;
+                }
+                if (document.getElementById('contactMessage')) {
+                    dataObj['message'] = document.getElementById('contactMessage').value;
+                }
+
+                $.ajax({
+                    url: 'https://heyleia.com/php/clientContact.php',
+                    data: dataObj,
+                    type: 'POST',
+                    success: function(data) {
+                        document.getElementById('spinnerLoading').parentElement.removeChild(document.getElementById('spinnerLoading'));
+                        if (data === 'success') {
+                            swal("Success", "You have successfully submitted your message! We will contact you at our earliest convenience.", "success");
+                            document.body.className = '';
+                        } else {
+                            swal("Uh Oh!", data, "error");
+                            document.body.className = '';
+                        }
+                    },
+                    error: function(err) {
+                        console.log(err);
+                        document.getElementById('spinnerLoading').parentElement.removeChild(document.getElementById('spinnerLoading'));
+                        swal("Uh Oh!", "There was a problem. Please try again later.", "error");
+                        document.body.className = '';
+                    }
+                });
+            }
+        });
+    }
+    
+    var submitNewsletter = function() {
+        var spinner = document.createElement('div');
+        var outer = document.createElement('div');
+
+        outer.id = 'spinnerLoading';
+        spinner.className = 'spinnerLoading';
+        outer.style.background = 'rgba(0,0,0,0.7)';
+        outer.style.borderRadius = '20px';
+        outer.style.position = 'fixed';
+        outer.style.left = ((window.innerWidth - 205) / 2).toString() + 'px';
+        outer.style.width = '205px';
+        outer.style.top = '30%';
+        outer.style.height = '205px';
+        outer.style.zIndex = '10000';
+        spinner.style.marginLeft = '42.5px';
+        spinner.style.marginTop = '42.5px';
+        outer.appendChild(spinner);
+        document.body.appendChild(outer);
+
+        if (!addedSpinner) {
+            addedSpinner = true;
+            addSpinnerStyle();
+        }
+
+        var dataObj = {
+            email: document.getElementById('newsletterInput').value
+        }
+        
+        $.ajax({
+            url: 'https://heyleia.com/php/clientNewsletter.php',
+            data: dataObj,
+            type: 'POST',
+            success: function(data) {
+                document.getElementById('spinnerLoading').parentElement.removeChild(document.getElementById('spinnerLoading'));
+                if (data === 'success') {
+                    swal("Success", "You have successfully subscribed to our mailing list!", "success").then(function() {
+                        document.getElementById('newsletterOuter').style.display = 'none';
+                    });
+                    
+                    document.body.className = '';
+                } else {
+                    swal("Uh Oh!", data, "error");
+                    document.body.className = '';
+                }
+            },
+            error: function(err) {
+                console.log(err);
+                document.getElementById('spinnerLoading').parentElement.removeChild(document.getElementById('spinnerLoading'));
+                swal("Uh Oh!", "There was a problem. Please try again later.", "error");
+                document.body.className = '';
+            }
+        });
+    }
+    
+    var addSpinnerStyle = function() {
+        var style = document.createElement('style');
+        style.appendChild(document.createTextNode(".spinnerLoading {border: 16px solid #f3f3f3; /* Light grey */border-top: 16px solid #3498db; /* Blue */border-radius: 50%;width: 120px;height: 120px;animation: spin 2s linear infinite;}@keyframes spin {0% { transform: rotate(0deg); }100% { transform: rotate(360deg); }}"));
+        document.body.appendChild(style);
+    };
+</script>
+<style id="customCSS">.text-custom-id-MjE5dCidItCw2rnq6FBHdCK7p1q3cxLhad5WE4L9{font-size: 72px !important;}@media only screen and (max-width : 800px) {.text-custom-id-MjE5dCidItCw2rnq6FBHdCK7p1q3cxLhad5WE4L9{font-size: 35px !important;}}.text-custom-id-TMgg6PPwqhEZyQveRNsiNRg1z1SPZHGfoQ1xlLbq{font-size: 15px !important;}@media only screen and (max-width : 800px) {.text-custom-id-TMgg6PPwqhEZyQveRNsiNRg1z1SPZHGfoQ1xlLbq{font-size: 22px !important;}}</style></body></html>

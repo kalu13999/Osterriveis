@@ -1,0 +1,126 @@
+﻿@font-face {
+  font-family: 'Bitter';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(s/bitter/v32/raxjHiqOu8IVPmn7epZnDMyKBvHf5D6c4P3-X3B3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url(s/bitter/v32/raxjHiqOu8IVPmn7epZnDMyKBvHf5D6cYPz-X3B3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(s/bitter/v32/raxjHiqOu8IVPmn7epZnDMyKBvHf5D6cvvz-X3B3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(s/bitter/v32/raxjHiqOu8IVPmn7epZnDMyKBvHf5D6c4Pz-X3B3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(s/bitter/v32/raxjHiqOu8IVPmn7epZnDMyKBvHf5D6c0vz-X3B3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(s/bitter/v32/raxjHiqOu8IVPmn7epZnDMyKBvHf5D6cPvv-X3B3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(s/bitter/v32/raxjHiqOu8IVPmn7epZnDMyKBvHf5D6cB_v-X3B3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url(s/bitter/v32/raxjHiqOu8IVPmn7epZnDMyKBvHf5D6cYPv-X3B3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(s/bitter/v32/raxjHiqOu8IVPmn7epZnDMyKBvHf5D6cSfv-X3B3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(s/bitter/v32/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8fbeOLjOWA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(s/bitter/v32/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8XbfOLjOWA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(s/bitter/v32/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8ajfOLjOWA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(s/bitter/v32/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8fbfOLjOWA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(s/bitter/v32/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8cTfOLjOWA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(s/bitter/v32/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8SjYOLjOWA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(s/bitter/v32/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8RHYOLjOWA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(s/bitter/v32/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8XbYOLjOWA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(s/bitter/v32/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8V_YOLjOWA.ttf) format('truetype');
+}
